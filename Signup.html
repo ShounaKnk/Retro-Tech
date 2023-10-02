@@ -6,111 +6,142 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body{
-            background-color: beige;
+            background-color: black;
+            border: solid rgb(154, 0, 154) 7px;
+            border-radius: 10px;
         }
 
-        /* hr{
+        #hr1{
             padding: 2px;
-            background-color: #396477;
-            margin-top: 1px;
-
+            background-color: red;
+            border-color: red;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            top: 10px
         }
-        h3{
+
+        h1{
+            background-color: #00ff00;
+            display: inline;
+            border-radius: 10px;
+            border: solid #00b400 3px;
+            position: relative;
+            left: 650px;
+            top: 15px;
+            padding: 5px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        /* h3{
             margin-bottom: 3px;
             background-color: #396477;
             padding: 20px 5px 1px;
             border-top-right-radius: 15px;
             border-top-left-radius: 15px;
-        } */
-        .form-label{
+        }  */
+        #block1 .form-label{
             padding : 3px 7px;
-            background-color: #CFC3A5;;
-            border-radius:17px;
-            border-color: #CFC3A5;;
+            background-color: #ee1f1f;
+            border-radius:10px;
             border-width: 3px;
-            color: white;
+            margin-top: 15px;
+        }
+
+        #block2 .form-label{
+            padding : 3px 7px;
+            background-color: #0062e2;
+            border-radius:6px;
+            border-width: 3px;
+            margin-top: 16px;
+        }
+
+        #main_div{
+            background-image: url("/pixle_artBG.jpg");
         }
 
         #block1, #block2, #conf{
-            background-color: rgb(217,179,130, 0.3);
+            background-color: black;
             border-radius: 20px;
+            border-color: rgb(154, 0, 154);
+            border-width: 8px;
+            border-style: solid;
             padding: 10px 10px;
-        }
-
-        #conf{
-            color: #001c58;
+            color: white;
+            margin-bottom: 15px
         }
     </style>
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col-1" ></div>
-            <div class="col-4">
-                <div id="block1">
-                    <h3>About You</h3><hr>
-                    <label class="form-label"> First Name </label>
-                    <input type="text" placeholder="first name" class="form-control form-select-sm"  id ="fname" autofocus><br>
-                    <label class="form-label"> Last Name </label>
-                    <input type="text" placeholder="last name" class="form-control form-select-sm " id ="lfname"><br>
-                    <label class="form-label">Gender</label><br>
-                        <input type="radio" value="male" name ="Gender" class="form-check-input form-select-sm" id="m">Male<br>
-                        <input type="radio" value="female" name ="Gender" class="form-check-input form-select-sm" id="f">Female<br>
-                        <input type="radio" value="others" name ="Gender" class="form-check-input form-select-sm" id="o">Others<br>
-                    <br><label class="form-label">Date of Birth </label>
-                    <input type="date" class="form-control form-select-sm" id="DOB"><br>    
-                    <label class="form-label">Country</label>
-                    <select class="form-select-sm">
-                        <option></option>
-                        <option>India</option>
-                        <option>Ameria</option>
-                        <option>Russia</option>
-                        <option>Japan</option>
-                        <option>Italy</option>
-                        <option>United Kingdom</option>
-                    </select>
-                    <br><br>
-                    <label class="form-label">Choose Profile picture </label><br>
-                    <input type="file" class="form-control form-select-sm" id="pfp" name="pfp">
-                    <br>
-                    <label class="form-label">Choose theme colour: </label>
-                    <input type="color" class="form-control-color" id="theme" name="theme">
+    <h1 >Sign Up</h1>
+    <hr id="hr1">
+    <div id="main_div">
+        <div class="container">
+            <div class="row">
+                <div class="col-1" ></div>
+                <div class="col-4" id="b1">
+                    <div id="block1">
+                        <h3>About You</h3><hr>
+                        <label class="form-label"> First Name </label>
+                        <input type="text" placeholder="first name" class="form-control form-select-sm"  id ="fname" autofocus>
+                        <label class="form-label"> Last Name </label>
+                        <input type="text" placeholder="last name" class="form-control form-select-sm " id ="lfname">
+                        <label class="form-label">Gender</label><br>
+                            <input type="radio" value="male" name ="Gender" class="form-check-input form-select-sm" id="m"> Male<br>
+                            <input type="radio" value="female" name ="Gender" class="form-check-input form-select-sm" id="f"> Female<br>
+                            <input type="radio" value="others" name ="Gender" class="form-check-input form-select-sm" id="o"> Others<br>
+                        <label class="form-label">Date of Birth </label>
+                        <input type="date" class="form-control form-select-sm" id="DOB">   
+                        <label class="form-label">Country</label><br>
+                        <select class="form-select-sm">
+                            <option></option>
+                            <option>India</option>
+                            <option>Ameria</option>
+                            <option>Russia</option>
+                            <option>Japan</option>
+                            <option>Italy</option>
+                            <option>United Kingdom</option>
+                        </select><br>
+                        <label class="form-label">Choose Profile picture </label><br>
+                        <input type="file" class="form-control form-select-sm" id="pfp" name="pfp">
+                        <label class="form-label">Choose theme colour: </label> 
+                        <input type="color" class="form-control-color" id="theme" name="theme">
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div id="block2">
-                    <h3>Account Details</h3><hr>
-                    <form action="backend.php">
-                        <label class="form-label">Phone Number </label>
-                        <input type="text" placeholder="Ph No." class="form-control form-select-sm" id="phno" maxlength="10"><br>
-                        <label class="form-label"> Email ID </label>
-                        <input type="email" placeholder="email" class="form-control form-select-sm" id ="eid" size="40" autocomplete="email"><br>
-                        <label class="form-label"> Alternate Email ID </label>
-                        <input type="email" placeholder="email" class="form-control form-select-sm" id ="Aeid" size="40" autocomplete="email"><br>
-                        <label class="form-label"> Create Password </label>
-                        <input type="text" placeholder="password" class="form-control form-select-sm" id ="pwrd"><br>
-                        <label class="form-label"> Confirm Password </label>
-                        <input type="text" placeholder="confirm" class="form-control form-select-sm" id ="cpwrd"><br>
-                        <label class="form-label">Number of People who can access account: </label>
-                        <input type="number" placeholder="no. of People" min="1" max="4" class="form-control form-select-sm" id="Nppl" ><br>    
-                        <label class="form-label">Pager number </label>
-                        <input type="number" placeholder="Pager No." class="form-control  form-select-sm" id="pgno" disabled>
-                    </form>
+                <div class="col-4">
+                    <div id="block2">
+                        <h3>Account Details</h3><hr>
+                        <form action="backend.php">
+                            <label class="form-label" style="margin-top: 10;">Phone Number </label>
+                            <input type="text" placeholder="Ph No." class="form-control form-select-sm" id="phno" maxlength="10">
+                            <label class="form-label"> Email ID </label>
+                            <input type="email" placeholder="email" class="form-control form-select-sm" id ="eid" size="40" autocomplete="email">
+                            <label class="form-label"> Alternate Email ID </label>
+                            <input type="email" placeholder="email" class="form-control form-select-sm" id ="Aeid" size="40" autocomplete="email">
+                            <label class="form-label"> Create Password </label>
+                            <input type="text" placeholder="password" class="form-control form-select-sm" id ="pwrd">
+                            <label class="form-label"> Confirm Password </label>
+                            <input type="text" placeholder="confirm" class="form-control form-select-sm" id ="cpwrd">
+                            <label class="form-label">Number of People who can access account: </label>
+                            <input type="number" placeholder="no. of People" min="1" max="4" class="form-control form-select-sm" id="Nppl">   
+                            <label class="form-label">Pager number </label>
+                            <input type="number" placeholder="Pager No." class="form-control  form-select-sm" id="pgno" disabled>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="col-2">
-                <div id="conf" align="center">
-                    <form>
-                        <input type="checkbox" class="form-select-sm" id="tc" readonly>I agree to all the terms and conditions<br><br>
-                        <input type="checkbox" class="form-select-sm" id="infoshare" readonly checked>I agree to share my data for personalized experience
-                        <br><br>
-                        <div class="btn-group-sm" role="group">
-                            <input type="submit" class="btn btn-danger">
-                            <input type="reset" class="btn btn-warning">
-                        </div>
-                    </form>
+                <div class="col-2">
+                    <div id="conf" align="center">
+                        <form>
+                            <input type="checkbox" class="form-select-sm" id="tc" readonly >
+                            <span style="color: white;">I agree to all the terms and conditions</span><br><br>
+                            <input type="checkbox" class="form-select-sm" id="infoshare" readonly checked style="color: white;">
+                            <span style="color: white;">I agree to share my data for personalized experience</span>
+                            <br><br>
+                            <div class="btn-group-sm" role="group">
+                                <input type="submit" class="btn btn-warning">
+                                <input type="reset" class="btn btn-warning">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
